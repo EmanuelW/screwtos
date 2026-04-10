@@ -22,3 +22,7 @@ dnf5 install -y tmux nextcloud-client
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+### Install Zed editor
+
+curl -f https://zed.dev/install.sh | sh
