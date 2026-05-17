@@ -22,3 +22,5 @@ dnf5 install -y tmux nextcloud-client goose
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+ln -s /lib64/libbz2.so.1 /lib64/libbz2.so.1.0
