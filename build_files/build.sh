@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux nextcloud-client
+dnf5 install -y tmux nextcloud-client goose
 
 # Use a COPR Example:
 #
@@ -22,3 +22,5 @@ dnf5 install -y tmux nextcloud-client
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+ln -s /lib64/libbz2.so.1 /lib64/libbz2.so.1.0
