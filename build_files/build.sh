@@ -25,5 +25,10 @@ systemctl enable podman.socket
 
 ln -s /lib64/libbz2.so.1 /lib64/libbz2.so.1.0
 
-wget https://github.com/lemonade-sdk/lemonade/releases/download/v10.6.0/lemonade-server-10.6.0-fc43.x86_64.rpm
-dnf5 install -y ./lemonade-server-10.6.0-fc43.x86_64.rpm
+# Install lemonade server and client
+wget https://github.com/lemonade-sdk/lemonade/releases/download/v10.6.0/lemonade-server-10.6.0-fc44.x86_64.rpm
+dnf5 install -y ./lemonade-server-10.6.0-fc44.x86_64.rpm
+
+# Justfile extensions
+cp build_files/just/60-custom.just /usr/share/ublue-os/just/
+cp build_files/just/61-screwtos-lemonade.just /usr/share/ublue-os/just/
