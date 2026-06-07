@@ -30,5 +30,5 @@ wget https://github.com/lemonade-sdk/lemonade/releases/download/v10.6.0/lemonade
 dnf5 install -y ./lemonade-server-10.6.0-fc44.x86_64.rpm
 
 # Justfile extensions
-cp build_files/just/60-custom.just /usr/share/ublue-os/just/
-cp build_files/just/61-screwtos-lemonade.just /usr/share/ublue-os/just/
+cp /ctx/just/60-custom.just /usr/share/ublue-os/just/
+cp /ctx/just/61-screwtos-lemonade.just /usr/share/ublue-os/just/
