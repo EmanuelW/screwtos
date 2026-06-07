@@ -24,3 +24,11 @@ dnf5 install -y tmux nextcloud-client goose
 systemctl enable podman.socket
 
 ln -s /lib64/libbz2.so.1 /lib64/libbz2.so.1.0
+
+# Install lemonade server and client
+wget https://github.com/lemonade-sdk/lemonade/releases/download/v10.6.0/lemonade-server-10.6.0-fc44.x86_64.rpm
+dnf5 install -y ./lemonade-server-10.6.0-fc44.x86_64.rpm
+
+# Justfile extensions
+cp /ctx/just/60-custom.just /usr/share/ublue-os/just/
+cp /ctx/just/61-screwtos-lemonade.just /usr/share/ublue-os/just/
