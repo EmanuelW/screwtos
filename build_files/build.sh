@@ -28,3 +28,4 @@ ln -s /lib64/libbz2.so.1 /lib64/libbz2.so.1.0
 # Install Nix
 dnf5 install -y nix nix-daemon
 systemctl enable nix-daemon
+chmod 777 /ctx/nix
