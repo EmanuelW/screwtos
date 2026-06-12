@@ -24,3 +24,7 @@ dnf5 install -y tmux nextcloud-client goose
 systemctl enable podman.socket
 
 ln -s /lib64/libbz2.so.1 /lib64/libbz2.so.1.0
+
+# Install Nix
+dnf5 install -y nix nix-daemon
+systemctl enable nix-daemon
