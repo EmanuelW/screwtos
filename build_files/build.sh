@@ -26,6 +26,7 @@ systemctl enable podman.socket
 ln -s /lib64/libbz2.so.1 /lib64/libbz2.so.1.0
 
 # Install Nix
+mkdir -m 777 /var/lib/nix
+ln -s /var/lib/nix /nix
 dnf5 install -y nix nix-daemon
 systemctl enable nix-daemon
-chmod 777 /nix
