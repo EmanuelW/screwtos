@@ -31,8 +31,9 @@ ln -s /lib64/libbz2.so.1 /lib64/libbz2.so.1.0
 # Is there another way to create a read-write folder (/ is read-only)?
 # mkdir -m 777 /var/lib/nix
 # ln -s /var/lib/nix /nix
-dnf5 install -y nix --exclude nix-daemon
+# dnf5 install -y nix
 # systemctl enable nix-daemon
+dnf5 install -y nix-core
 
 # Justfile extensions
 cp /ctx/just/60-custom.just /usr/share/ublue-os/just/
