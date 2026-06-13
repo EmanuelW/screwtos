@@ -26,7 +26,14 @@ systemctl enable podman.socket
 ln -s /lib64/libbz2.so.1 /lib64/libbz2.so.1.0
 
 # Install Nix
-mkdir -m 777 /var/lib/nix
-ln -s /var/lib/nix /nix
-dnf5 install -y nix nix-daemon
-systemctl enable nix-daemon
+# TODO: This method to get the /nix usable does not work
+# Can we create a btrfs subvolume and mount it to /nix instead?
+# Is there another way to create a read-write folder (/ is read-only)?
+# mkdir -m 777 /var/lib/nix
+# ln -s /var/lib/nix /nix
+dnf5 install -y nix --exclude nix-daemon
+# systemctl enable nix-daemon
+
+# Justfile extensions
+cp /ctx/just/60-custom.just /usr/share/ublue-os/just/
+cp /ctx/just/61-screwtos-nix.just /usr/share/ublue-os/just/
